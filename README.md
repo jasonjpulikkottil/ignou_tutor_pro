@@ -1,4 +1,4 @@
-# IGNOU Tutor
+# IGNOU Tutor PRO
 
 
 [Download App From Google Play](https://play.google.com/store/apps/details?id=com.jdots.ignoupro)
