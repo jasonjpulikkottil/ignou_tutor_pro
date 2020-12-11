@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/toolbar_layout"
+            layout="@layout/toolbar_conversation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/messageRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/toolbar_layout"
+            android:layout_marginBottom="50dp"
+            android:scrollbars="vertical"
+            />
+
+        <RelativeLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:background="@drawable/bg_msg_bar"
+            android:elevation="10dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/emoticonButton"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/btn_white"
+                android:clickable="false"
+                android:src="@drawable/ic_menu_emoticon"
+                />
+
+            <ImageButton
+                android:id="@+id/sendButton"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/btn_selector"
+                android:clickable="false"
+                android:enabled="false"
+                android:paddingStart="5dp"
+                android:src="@drawable/ic_menu_send"
+                />
+
+            <github.ankushsachdeva.emojicon.EmojiconEditText
+                android:id="@+id/messageEditText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_toStartOf="@id/sendButton"
+                android:layout_toEndOf="@+id/emoticonButton"
+                android:background="@drawable/bg_msg_bar"
+                android:hint="@string/chat.hint.message"
+                android:inputType="textCapSentences"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/typingTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/linearLayout"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="3dp"
+            android:background="@drawable/bg_divider_date"
+            android:paddingLeft="6dp"
+            android:paddingTop="3dp"
+            android:paddingRight="6dp"
+            android:paddingBottom="3dp"
+            android:textColor="@color/colorText"
+            android:visibility="gone"
+            />
+
+    </RelativeLayout>
+
+</merge>
