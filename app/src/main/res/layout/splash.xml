@@ -78,7 +78,7 @@
             android:background="@color/Transparent"
             android:gravity="center"
             android:paddingBottom="20dp"
-            android:text="RRESTART APP"
+            android:text="RESTART THE APP AFTER ACTIVATION"
             android:textColor="#2B5326"
             android:textSize="14sp" />
 
